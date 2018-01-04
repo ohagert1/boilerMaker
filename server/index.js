@@ -1,8 +1,8 @@
-import express from 'express';
-import morgan from 'morgan';
-import path from 'path';
-import bodyParser from 'body-parser';
-import router from './router';
+const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
+const bodyParser = require('body-parser');
+const router = require('./router');
 const app = express();
 
 
@@ -23,4 +23,4 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
 
-export default app;
+module.exports = app;

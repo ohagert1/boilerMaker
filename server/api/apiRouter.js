@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 const apiRouter = express.Router();
 
 apiRouter.use((req, res, next) => {
@@ -7,4 +7,4 @@ apiRouter.use((req, res, next) => {
   next(err);
 })
 
-export default apiRouter;
+module.exports = apiRouter;
